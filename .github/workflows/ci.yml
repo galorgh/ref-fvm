@@ -11,7 +11,7 @@ env:
 
 jobs:
   rustfmt:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, arm64, linux-arm64-default]
     steps:
     - name: Checking out fvm
       uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
         command: fmt
         args: -- --check
   cargo:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, arm64, linux-arm64-default]
     strategy:
       fail-fast: false
       matrix:
