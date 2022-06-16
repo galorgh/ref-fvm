@@ -101,6 +101,16 @@ jobs:
         version: v0.2.15
         # change this to invalidate sccache for this job
         shared-key: v1
+    - run: |
+        which sccache
+        echo ''
+        ls /home/ec2-user/.rustup/
+        echo ''
+        ls /home/ec2-user/.rustup/toolchains/
+        echo ''
+        ls /home/ec2-user/.rustup/toolchains/nightly-2022-05-09-aarch64-unknown-linux-gnu/
+        echo ''
+        ls /home/ec2-user/.rustup/toolchains/nightly-2022-05-09-aarch64-unknown-linux-gnu/bin/
     - name: Running ${{ matrix.command }}
       uses: actions-rs/cargo@844f36862e911db73fe0815f00a4a2602c279505 # v1.0.3
       with:
