@@ -68,6 +68,8 @@ jobs:
       run: |
         # Open up /usr/local/bin
         sudo chmod -R 777 /usr/local/bin
+        # Add /usr/local/bin to PATH
+        echo '/usr/local/bin' >> $GITHUB_PATH
         # Install gh
         wget https://github.com/cli/cli/releases/download/v2.12.1/gh_2.12.1_linux_arm64.rpm
         sudo rpm -i gh_2.12.1_linux_arm64.rpm
