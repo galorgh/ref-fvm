@@ -66,6 +66,7 @@ jobs:
     steps:
     - name: Machine setup (to be moved to the AMI)
       run: |
+        sudo yum group install "Development Tools"
         # Open up /usr/local/bin
         sudo chmod -R 777 /usr/local/bin
         # Add /usr/local/bin to PATH
