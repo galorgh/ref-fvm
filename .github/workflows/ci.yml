@@ -67,7 +67,7 @@ jobs:
     - name: Machine setup (to be moved to the AMI)
       run: |
         # Install gh
-        sudo dnf install gh
+        yum install gh
       shell: bash
     - name: Checking out fvm
       uses: actions/checkout@v2
