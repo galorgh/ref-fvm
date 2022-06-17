@@ -95,9 +95,10 @@ jobs:
         command: generate-lockfile
     - name: Installing Cargo llvm-cov
       if: ${{ matrix.covname }}
-      uses: taiki-e/install-action@47e0a4c507c49a64304ce95e89e9839ca14faef2 # v1.4.2
+      uses: actions-rs/cargo@844f36862e911db73fe0815f00a4a2602c279505 # v1.0.3
       with:
-        tool: cargo-llvm-cov@0.4.8
+        command: install
+        args: cargo-llvm-cov
     - name: Setting up cache
       uses: ./.github/actions/rust-sccache
       env:
